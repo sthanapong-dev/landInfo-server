@@ -12,7 +12,6 @@ export default class Factory {
         await next();
     });
 
-
     public verify = this.factory.createMiddleware(async (c: Context, next: Next) => {
         try {
             // read cookie
@@ -45,6 +44,10 @@ export default class Factory {
         } 
         await next();
     });
+
+    public async permission(c: Context, next: Next) {
+        await next();
+    }
 
 
 }

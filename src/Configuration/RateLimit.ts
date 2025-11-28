@@ -18,7 +18,7 @@
 //     const requestCount = await redisClient.zCard(redisKey);
 
 //     if (requestCount >= options.maxRequests) {
-//       return c.json({ message: 'Too Many Requests' }, 429);
+//       return c.json({ msg: 'Too Many Requests' }, 429);
 //     }
 //     await redisClient.zAdd(redisKey, {
 //         score: currentTimestamp,

@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "bun run --hot src/index.ts",
     "dev-ts": "bun run watch-ts & bun run watch-bun",
-    "build": "bun build src/index.ts --compile --minify --outfile .output/server"
+    "build": "bun build src/index.ts --compile --minify --outfile .output/server",
+    "seed": "bun run src/seed/Seeddb.ts"
   },
   "dependencies": {
     "@hono/standard-validator": "^0.1.5",
@@ -15,6 +16,7 @@
     "hono-openapi": "^1.1.0",
     "lodash": "^4.17.21",
     "mongoose": "^9.0.0",
+    "msgpackr": "^1.11.5",
     "redis": "^5.9.0",
     "zod": "^4.1.12"
   },

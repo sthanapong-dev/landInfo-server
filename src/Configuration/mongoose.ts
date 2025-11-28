@@ -2,7 +2,6 @@ import mongoose from "mongoose";
 
 const connectDB = async () => {
   const uri = process.env.DATABASE_URL as string;
-
   try {
     
     await mongoose.connect(uri, {
@@ -33,4 +32,10 @@ mongoose.connection.on("error", (error) => {
   console.error(`MongoDB connection error: ${error}`);
 });
 
-export default connectDB;
+
+const closeDB = async () => {
+  await mongoose.connection.close();
+};
+
+
+export { connectDB, closeDB };
