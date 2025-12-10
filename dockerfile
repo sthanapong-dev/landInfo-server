@@ -21,6 +21,9 @@ RUN bun install --no-progress
 # Copy the rest of the source
 COPY . .
 
+ARG PORT
+ENV DATABASE_URL=$PORT
+
 ARG DATABASE_URL
 ENV DATABASE_URL=$DATABASE_URL
 
@@ -43,6 +46,7 @@ RUN bun build src/index.ts --compile --minify --outfile .output/server
 
 FROM debian:bookworm-slim AS release
 LABEL stage=release
+
 
 # Install runtime dependencies required by the compiled binary.
 # Adjust packages as needed for your environment.

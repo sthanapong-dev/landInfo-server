@@ -15,7 +15,7 @@ import {connectDB} from '@/Configuration/mongoose';
 
 
 const app = new OpenAPIHono()
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8080;
 const env = process.env.NODE_ENV || "development";
 
 
@@ -57,7 +57,7 @@ app.get(
         description: 'Team Stedia',
       },
       servers: [
-        { url: `${env === "development" ? `http://localhost:${port}` : "https://api8000.stedia.app"}`, description: 'Local Server' },
+        { url: `${env === "development" ? `http://localhost:${port}` : `https://api${port}.stedia.app`}`, description: 'Local Server' },
       ],
     },
   })
