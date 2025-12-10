@@ -44,6 +44,7 @@ RUN bun build src/index.ts --compile --minify --outfile .output/server
 FROM debian:bookworm-slim AS release
 LABEL stage=release
 
+
 # Install runtime dependencies required by the compiled binary.
 # Adjust packages as needed for your environment.
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
