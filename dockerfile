@@ -21,6 +21,9 @@ RUN bun install --no-progress
 # Copy the rest of the source
 COPY . .
 
+ARG PORT
+ENV DATABASE_URL=$PORT
+
 ARG DATABASE_URL
 ENV DATABASE_URL=$DATABASE_URL
 

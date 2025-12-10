@@ -16,6 +16,7 @@ jobs:
       # 2️ Set up environment variables
       - name: Set up environment
         env:
+          PORT: ${{ secrets.PORT }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           REDIS_URL: ${{ secrets.REDIS_URL }}
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
