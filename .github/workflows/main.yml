@@ -60,4 +60,3 @@ jobs:
       - name: Connect to network
         run: |
            docker network connect app-network landinfo-backend
-
