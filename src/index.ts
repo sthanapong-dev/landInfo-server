@@ -57,7 +57,7 @@ app.get(
         description: 'Team Stedia',
       },
       servers: [
-        { url: `${env === "development" ? `http://localhost:${port}` : "https://api8000.stedia.app"}`, description: 'Local Server' },
+        { url: `${env === "development" ? `http://localhost:${port}` : `https://api${port}.stedia.app`}`, description: 'Local Server' },
       ],
     },
   })
