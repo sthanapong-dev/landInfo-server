@@ -15,7 +15,7 @@ import {connectDB} from '@/Configuration/mongoose';
 
 
 const app = new OpenAPIHono()
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8080;
 const env = process.env.NODE_ENV || "development";
 
 
