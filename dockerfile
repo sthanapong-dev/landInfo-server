@@ -13,7 +13,7 @@ WORKDIR /app
 # Copy package files first to leverage Docker layer cache for deps
 # Copy the lockfile that exists in this repo (package-lock.json). If you
 # use bun's bun.lockb in the future, prefer copying that instead.
-COPY package.json package-lock.json import_map.json tsconfig.json ./
+COPY package.json package-lock.json  tsconfig.json ./
 
 # Install all dependencies
 RUN bun install --no-progress
